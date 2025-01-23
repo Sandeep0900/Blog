@@ -5,13 +5,13 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-s
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBraNBMspfXeZb9XDAhPXU8MUWFt4teJLc",
+  apiKey: "USE YOUR API KEY",
   authDomain: "sandeep-s-storage.firebaseapp.com",
   projectId: "sandeep-s-storage",
   storageBucket: "sandeep-s-storage.appspot.com",
-  messagingSenderId: "269871179347",
-  appId: "1:269871179347:web:aba931396849e9444348a6",
-  measurementId: "G-39ZNHDQYC9"
+  messagingSenderId: "USE YOUR API ID",
+  appId: "USE YOUR API APP-ID",
+  measurementId: "USE YOUR MEASUR. ID"
 };
 
 // Initialize Firebase
