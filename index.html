@@ -1,0 +1,83 @@
+<!-- (http-server) to run the website -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextVerse - Blog Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div id="auth-container" class="max-w-md mx-auto">
+            <!-- Auth Sections -->
+            <div id="signup-section" class="bg-white shadow-md rounded-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-indigo-600">Sign Up</h2>
+                <div class="space-y-4">
+                    <input type="email" id="signup-email" placeholder="Email" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <input type="password" id="signup-password" placeholder="Password" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button id="signup-btn" 
+                        class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+                        Sign Up
+                    </button>
+                    <p id="switch-to-login" class="text-center text-sm text-gray-600 cursor-pointer hover:text-indigo-600">
+                        Already have an account? Login
+                    </p>
+                </div>
+            </div>
+
+            <div id="login-section" class="hidden bg-white shadow-md rounded-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-indigo-600">Login</h2>
+                <div class="space-y-4">
+                    <input type="email" id="login-email" placeholder="Email" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <input type="password" id="login-password" placeholder="Password" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button id="login-btn" 
+                        class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+                        Login
+                    </button>
+                    <p id="switch-to-signup" class="text-center text-sm text-gray-600 cursor-pointer hover:text-indigo-600">
+                        Don't have an account? Sign Up
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-section" class="hidden max-w-4xl mx-auto">
+            <div class="bg-white shadow-md rounded-lg p-8 mb-6">
+                <h2 class="text-3xl font-bold mb-6 text-indigo-600">Create Blog Post</h2>
+                <div class="space-y-4">
+                    <input type="file" id="image-upload" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <textarea id="blog-text" placeholder="Write your blog here" 
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 h-32"></textarea>
+                    <div class="flex space-x-4">
+                        <button id="post-btn" 
+                            class="flex-grow bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                            Post Blog
+                        </button>
+                        <button id="logout-btn" 
+                            class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-8">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Your Blogs</h3>
+                <div id="blog-posts" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
